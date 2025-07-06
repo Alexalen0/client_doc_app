@@ -1,0 +1,63 @@
+/* Dashboard Page Styles */
+.dashboard-container {
+  max-width: 1100px;
+  margin: 4vh auto 0 auto;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  background: linear-gradient(135deg, #18120f 80%, #222 100%);
+  border-radius: 22px;
+  box-shadow: 0 8px 40px 0 rgba(24, 18, 15, 0.32),
+    0 2px 16px 0 rgba(255, 215, 0, 0.1);
+  min-height: 70vh;
+  color: #ffd700;
+}
+.dashboard-container h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffd700;
+  text-shadow: 0 2px 12px #18120f99;
+}
+.dashboard-container .btn {
+  font-size: 1.08rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.7em 1.5em;
+  background: linear-gradient(90deg, #ffd700 80%, #fff8dc 100%);
+  color: #18120f;
+  border: none;
+  box-shadow: 0 2px 12px 0 rgba(255, 215, 0, 0.1);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.dashboard-container .btn:hover {
+  background: linear-gradient(90deg, #fff8dc 60%, #ffd700 100%);
+  color: #18120f;
+  box-shadow: 0 4px 24px 0 rgba(255, 215, 0, 0.18);
+  transform: translateY(-2px) scale(1.03);
+}
+.dashboard-container .card {
+  background: #222;
+  color: #ffd700;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(24, 18, 15, 0.18);
+  padding: 2rem;
+  margin: 1.5rem 0;
+}
+.dashboard-container input {
+  background: #18120f;
+  color: #ffd700;
+  border: none;
+  border-bottom: 2.5px solid #ffd700;
+  border-radius: 0;
+  padding: 1.1em 1em 0.9em 1em;
+  font-size: 1.13rem;
+  font-family: inherit;
+  font-weight: 500;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(24, 18, 15, 0.08);
+  margin-right: 1rem;
+}
+.dashboard-container input:focus {
+  border-bottom: 2.5px solid #fff8dc;
+  box-shadow: 0 2px 16px 0 #ffd70033;
+  background: #222;
+}

@@ -1,0 +1,270 @@
+:root {
+  --color-bg: #18120f;
+  --color-bg-alt: #222;
+  --color-text: #ffd700;
+}
+
+/* Prevent horizontal and unnecessary vertical scrollbars on login/register pages */
+body,
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.auth-center-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--color-bg) 0%,
+    var(--color-bg-alt) 100%
+  );
+}
+
+/* Modern input with icon group for login/register - dark theme only */
+.input-icon-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1.2rem;
+  color: #ffd700;
+  font-size: 1.1rem;
+  pointer-events: none;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.input-icon-group input {
+  width: 100%;
+  padding: 1.2rem 1.2rem 1.2rem 3rem;
+  color: #ffd700;
+  background: #222;
+  border: 2px solid #ffd700;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.input-icon-group input::placeholder {
+  color: #ffd700;
+  font-weight: 400;
+}
+
+.input-icon-group input:focus {
+  border-color: #fff8dc;
+  background: #18120f;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1),
+    0 8px 32px rgba(255, 215, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.input-icon-group input:focus + .input-icon {
+  color: #fff8dc;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Center the login/register form only for those pages */
+.auth-center-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #18120f 0%, #222 100%);
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.auth-center-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 215, 0, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 215, 0, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+.auth-center-container > .card.login-form,
+.auth-center-container > .card.register-form {
+  min-width: 380px;
+  max-width: 420px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  background: #222;
+  color: #ffd700;
+  border: 1px solid #ffd700;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 215, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.auth-center-container > .card.login-form::before,
+.auth-center-container > .card.register-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.05) 0%,
+    transparent 50%
+  );
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+/* Form title styling */
+.auth-center-container h2 {
+  color: #ffd700;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Button styling */
+.auth-center-container button[type="submit"] {
+  width: 100%;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 1rem;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+}
+
+.auth-center-container button[type="submit"]:hover {
+  background: linear-gradient(135deg, #ffed4e 0%, #ffd700 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.4);
+}
+
+.auth-center-container button[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+}
+
+/* Link styling for switch between login/register */
+.auth-link,
+.auth-center-container .App-link {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #ffd700;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 1.08rem;
+  letter-spacing: 0.2px;
+  transition: color 0.2s, text-shadow 0.2s;
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.auth-link:hover,
+.auth-center-container .App-link:hover {
+  color: #fff8dc;
+  text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .auth-center-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .auth-center-container > .card.login-form,
+  .auth-center-container > .card.register-form {
+    min-width: 0;
+    max-width: 95vw;
+    padding: 2rem 1.5rem;
+  }
+
+  .auth-center-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .input-icon-group input {
+    padding: 1rem 1rem 1rem 2.8rem;
+    font-size: 0.95rem;
+  }
+
+  .input-icon {
+    left: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .auth-center-container > .card.login-form,
+  .auth-center-container > .card.register-form {
+    padding: 1.5rem 1rem;
+  }
+
+  .input-icon-group {
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Loading state for button */
+.auth-center-container button[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Focus visible for accessibility */
+.auth-center-container button[type="submit"]:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+}
+
+.input-icon-group input:focus-visible {
+  outline: none;
+}

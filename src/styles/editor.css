@@ -1,0 +1,54 @@
+/* Editor Page Styles */
+.editor-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: linear-gradient(135deg, #18120f 80%, #222 100%);
+  border-radius: 22px;
+  box-shadow: 0 8px 40px 0 rgba(24, 18, 15, 0.32),
+    0 2px 16px 0 rgba(255, 215, 0, 0.1);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+}
+.editor-container h2 {
+  color: #ffd700;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 12px #18120f99;
+}
+.editor-container .btn {
+  font-size: 1.08rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.7em 1.5em;
+  background: linear-gradient(90deg, #ffd700 80%, #fff8dc 100%);
+  color: #18120f;
+  border: none;
+  box-shadow: 0 2px 12px 0 rgba(255, 215, 0, 0.1);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.1s;
+  margin-right: 1rem;
+}
+.editor-container .btn:hover {
+  background: linear-gradient(90deg, #fff8dc 60%, #ffd700 100%);
+  color: #18120f;
+  box-shadow: 0 4px 24px 0 rgba(255, 215, 0, 0.18);
+  transform: translateY(-2px) scale(1.03);
+}
+.editor-container .ql-container {
+  background: #222;
+  color: #ffd700;
+  border-radius: 8px;
+  min-height: 300px;
+  font-size: 1.1rem;
+}
+.editor-container .ql-toolbar {
+  background: #18120f;
+  border-radius: 8px 8px 0 0;
+  border: none;
+}
+.editor-container .ql-toolbar button {
+  color: #ffd700 !important;
+}
+.editor-container .ql-toolbar button.ql-active {
+  background: #ffd700 !important;
+  color: #18120f !important;
+}
