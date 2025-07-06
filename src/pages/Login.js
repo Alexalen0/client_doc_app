@@ -15,10 +15,13 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/login", {
-        username,
-        password,
-      });
+      const res = await axios.post(
+        `${process.env.REACT_APP_API_URL}/api/login`,
+        {
+          username,
+          password,
+        }
+      );
       login(res.data.token);
       navigate("/dashboard");
     } catch {

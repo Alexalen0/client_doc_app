@@ -12,7 +12,7 @@ function Dashboard() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/docs", {
+      .get(`${process.env.REACT_APP_API_URL}/api/docs`, {
         headers: { Authorization: token },
       })
       .then((res) => setDocs(res.data));
@@ -21,7 +21,7 @@ function Dashboard() {
   const createDoc = async (e) => {
     e.preventDefault();
     const res = await axios.post(
-      "http://localhost:5000/api/docs",
+      `${process.env.REACT_APP_API_URL}/api/docs`,
       { title },
       {
         headers: { Authorization: token },
@@ -34,7 +34,7 @@ function Dashboard() {
   const deleteDoc = async (id) => {
     if (!window.confirm("Are you sure you want to delete this document?"))
       return;
-    await axios.delete(`http://localhost:5000/api/docs/${id}`, {
+    await axios.delete(`${process.env.REACT_APP_API_URL}/api/docs/${id}`, {
       headers: { Authorization: token },
     });
     setDocs(docs.filter((doc) => doc._id !== id));

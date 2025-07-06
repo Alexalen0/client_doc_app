@@ -15,7 +15,7 @@ function Editor() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/docs/${id}`, {
+      .get(`${process.env.REACT_APP_API_URL}/api/docs/${id}`, {
         headers: { Authorization: token },
       })
       .then((res) => {
@@ -26,7 +26,7 @@ function Editor() {
 
   const save = async () => {
     await axios.put(
-      `http://localhost:5000/api/docs/${id}`,
+      `${process.env.REACT_APP_API_URL}/api/docs/${id}`,
       { content },
       {
         headers: { Authorization: token },
