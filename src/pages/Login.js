@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import { AuthContext } from "../AuthContext";
 import { useNavigate } from "react-router-dom";
@@ -11,6 +11,10 @@ function Login() {
   const [password, setPassword] = useState("");
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    alert("Demo credentials:\nUsername: asd\nPassword: asd123");
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
